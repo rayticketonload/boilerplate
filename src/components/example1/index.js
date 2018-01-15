@@ -1,10 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Counter } from 'COM';
-import { axios } from 'UTILS';
-import style from './basicExample-custom';
-
-// import { Button } from 'antd-mobile';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
+import {Counter} from 'COM';
+// import {axios} from 'UTILS';
+import style from './style';
 
 
 const Home = () => (

@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
 // 适用 react hot loader 让热更新后保留React的组件状态
-import { AppContainer } from 'react-hot-loader';
+import {AppContainer} from 'react-hot-loader';
+
+// 引入普通组件
+// import {BasicExample} from 'COM';
 
 // 引入整个页面组件
-// import { Foo } from 'PAGES';
+import {Index} from 'PAGES';
 
 // 引入JQ
 // import $ from 'jquery';
@@ -19,7 +22,9 @@ const render = () => {
   ReactDOM.render (
     <AppContainer>
       <Router>
-        <Foo />
+        <div className="appWrap">
+          <Index />
+        </div>
       </Router>
     </AppContainer>,
     appElement,

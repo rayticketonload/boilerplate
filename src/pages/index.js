@@ -1,5 +1,5 @@
-// import foo from './foo';
+import Index from './examplePage';
 
 export {
-  // foo,
+  Index,
 };

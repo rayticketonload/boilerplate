@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { axios } from 'UTILS';
+// import {axios} from 'UTILS';
 import './style';
 
 class Index extends React.Component {
