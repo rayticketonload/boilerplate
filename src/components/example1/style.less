@@ -1,0 +1,57 @@
+.size(@height,@width,@color) {
+  height: @height;
+  width: @width;
+  color: @color;
+}
+
+.px2rem(@px) {
+  @result: @px / 20px * 1rem;
+}
+
+#nav {
+  .red {
+    .size(auto,auto,red);
+    .px2rem(24px);
+    font-size: @result;
+  }
+  .blue {
+    color: blue;
+    .px2rem(32px);
+    font-size: @result;
+  }
+}
+
+.init-margin(@min: 0, @max: 50, @space: 5, @pre: fn) {
+  .build-margin(@count) when (@count >= @min) {
+    .build-margin((@count - @space));
+
+    .@{pre}-mt-@{count} {
+      margin-top: @count * 1px;
+    }
+    .@{pre}-mb-@{count} {
+      margin-bottom: @count * 1px ;
+    }
+    .@{pre}-mtb-@{count} {
+      margin-top: @count * 1px ;
+      margin-bottom: @count * 1px ;
+    }
+
+    .@{pre}-ml-@{count} {
+      margin-left: @count * 1px ;
+    }
+    .@{pre}-mr-@{count} {
+      margin-right: @count * 1px ;
+    }
+    .@{pre}-mlr-@{count} {
+      margin-left: @count * 1px ;
+      margin-right: @count * 1px ;
+    }
+
+    .@{pre}-ma-@{count} {
+      margin: @count * 1px ;
+    }
+  }
+
+  .build-margin(@max);
+}
+.init-margin;
