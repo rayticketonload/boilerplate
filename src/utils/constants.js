@@ -18,10 +18,10 @@ const systemConfig = {
     isDev: false
 }
 
-export default { 
-    STORE_AUDITSTATUS, 
+export default {
+    STORE_AUDITSTATUS,
     STORE_USESTATUS,
-    systemConfig 
+    systemConfig
 };
 
 

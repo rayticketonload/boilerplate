@@ -9,7 +9,7 @@ const COM_DIR = path.join(ABSOLUTE_BASE, 'src/components'); // 公用组件
 const ASSETS_DIR = path.join(ABSOLUTE_BASE, 'src/assets');
 const PORT = process.env.PORT || 7044;
 // WDS
-const PROJECT_ID = 31; // mock 上的 project id
+const PROJECT_ID = 4132; // mock 上的 project id
 const HOST = utils.getIP();
 // 终端运行命令行，process.env.NODE_ENV 返回 true 是生产环境，否则是 development
 const ISDEV = (process.env.NODE_ENV !== 'production') ? true : false;

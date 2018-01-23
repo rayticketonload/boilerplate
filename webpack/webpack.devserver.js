@@ -10,13 +10,13 @@ new WebpackDevServer(webpack(webpackConfig), {
   compress: true,
   proxy: {
     '/api/*': {
-      target: 'http://rap.monster/',
+      target: 'http://rap2api.taobao.org/',
       pathRewrite: {
-          '^/api': `/mockjsdata/${constants.PROJECT_ID}/api`
+        '^/api': `app/mock/${constants.PROJECT_ID}/`,
       },
       changeOrigin: true,
-      secure: false
-    }
+      secure: false,
+    },
   },
   stats: { colors: true }
 }).listen(constants.PORT, constants.HOST, function (err, result) {

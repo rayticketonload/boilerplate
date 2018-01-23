@@ -1,8 +1,8 @@
 // 常用工具类
 
-import {
-    Toast,
-} from 'antd-mobile';
+// import {
+//     Toast,
+// } from 'antd-mobile';
 
 const tools = {
     // 隐藏中间部分的手机号码
@@ -23,7 +23,7 @@ const tools = {
     }
     return false;
   },
-  
+
   //  url添加参数的方法,params为对象
   urlAddParam(url, params) {
     const reg = new RegExp(/\?+/);
@@ -46,7 +46,8 @@ const tools = {
         break;
       }
     }
-    Toast.fail(message, 2);
+    // Toast.fail(message, 2);
+    console.log(message);
   },
     // 设置title
   setDocumentTitle(title) {
