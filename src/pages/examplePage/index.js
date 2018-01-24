@@ -4,6 +4,14 @@ import {axios} from 'UTILS';
 import './style';
 
 class Index extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state({
+
+    });
+  }
+
   componentDidMount() {
     // console.log(document.documentElement.clientWidth);
   }
@@ -25,9 +33,13 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.textAPI}>
-          test
-        </button>
+        <form id="textForm">
+          <input type="text" value={userNameValue} placeholder="userName"/>
+          <input type="text" value={smsPinValue} placeholder="smsPin"/>
+          <button onClick={this.textAPI}>
+            submit
+          </button>
+        </form>
       </div>
     );
   }
