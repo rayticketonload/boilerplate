@@ -1,20 +1,28 @@
 import React from 'react';
 
-const COUNT_STEP = 1;
-
-class DefaultFormControl extends React.Component {
+class Input extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      value: this.props.value,
       valid: false,
-      value: '',
-      error: ''
+      error: '',
     };
   }
 
+  static defaultProps = {
+    value: '',
+    placeholder: '',
+  };
+
+  static propTypes = {
+    value: React.PropTypes.string.isRequired,
+    placeholder: React.PropTypes.string.isRequired,
+  };
+
   // 表单键入值控制
-  handleChange = e => {
+  valueChange = e => {
     this.setState({
       value: e.target.value,
     })
@@ -34,10 +42,13 @@ class DefaultFormControl extends React.Component {
       <div>
         <input
           value={value}
+          onChange={this.props.onChange}
+          type="text"
+          placeholder={this.props.placeholder}
         />
       </div>
     );
   }
 };
 
-export default DefaultFormControl;
+export default Input;
